@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background-color: #c0deed;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    outline: 1px solid red;
+}
+
+.page-header {
+    box-shadow: 0px 1px 2px 0px rgba(1, 2, 2, 0.5);
+    background-image: -moz-linear-gradient( 90deg, rgb(17,17,17) 0%, rgb(51,51,51) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(17,17,17) 0%, rgb(51,51,51) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(17,17,17) 0%, rgb(51,51,51) 100%);
+}
+
+.page-header-inner {
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 18px;
+}
+
+.search {
+    margin-right: 18px;
+    border: 1px solid #010202;
+    border-radius: 4px;
+    background-color: rgb(102, 102, 102);
+    box-shadow: 0px 2px 0px 0px rgba(68, 68, 68, 0.004);
+    width: 214px;
+    height: 28px;
+    background-image: url(./images/search-icon.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 7px) center;
+}
+
+.search::placeholder {
+    color: #999999;
+    opacity: 1;
+    padding-left: 8px;
+}
+
+.header-menu {
+    display: flex;
+}
+
+.header-menu-item {
+    margin-right: 18px;
+    font-size: 13px;
+    color: #bababa;
+}
+
+.header-menu li a {
+    text-decoration: none;
+}
+
+.header-menu li a:hover {
+    text-decoration: underline;
+}
+
+.new-post {
+    margin-left: auto;
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-image: url(./images/new-tweet-icon.png);
+    background-repeat: no-repeat;
+}
+
+.user-profile {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #040404;
+    height: 26px;
+    padding-left: 16px;
+    margin-left: 16px;
+}
+
+.user-profile a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #a8a8a8;
+    background-image: url(./images/drop-arrow.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 10px;
+    margin-left: 12px;
+}
+
+.page-content {
+    background-image: url(./images/cloud.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.page-content-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main {
+    width: 540px;
+    height: 300px;
+    background-color: #fff;
+    margin-left: -20px;
+}
+
+.sidebar {
+    width: 380px;
+    height: 300px;
+    background-color: #e5e3de;
+    margin-right: -20px;
+}
+  
