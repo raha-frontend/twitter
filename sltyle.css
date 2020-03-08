@@ -107,6 +107,7 @@ body {
     background-image: url(./images/cloud.jpg);
     background-repeat: no-repeat;
     background-position: center top;
+    padding-top: 20px;
 }
 
 .page-content-inner {
@@ -119,6 +120,69 @@ body {
     height: 300px;
     background-color: #fff;
     margin-left: -20px;
+}
+
+.user-info {
+    padding: 20px 20px 0;
+    margin-bottom: 26px;
+    display: flex;
+}
+
+.user-info-image {
+    margin-right: 16px;
+}
+
+.user-info-content {
+    padding-top: 4px;
+    flex-grow: 1;
+}
+
+.user-info-name {
+    margin-bottom: 2px;
+    font-size: 30px;
+    color: #383838;
+    display: inline-block;
+}
+
+.user-name-official {
+    position: relative;
+}
+
+.user-name-official::after {
+    content: "";
+    background-image: url(./images/official-icon.png);
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    right: -41px;
+    top: 12px;
+}
+
+.user-info-nickname {
+    margin-bottom: 6px;
+    font-size: 18px;
+    color: #383838;
+}
+
+.user-info-nickname span {
+    font-size: 13px;
+    margin-left: 22px;
+}
+
+.user-info-bio {
+    font-size: 14px;
+    color: #777777;
+}
+
+.user-info-url {
+    font-size: 13px;
+    color: #317ea8;
+    text-decoration: none;
+}
+
+.user-info-url:hover {
+    text-decoration: underline;
 }
 
 .sidebar {
