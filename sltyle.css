@@ -124,7 +124,6 @@ button {
 
 .main {
     width: 540px;
-    min-height: 800px;
     background-color: #fff;
     margin-left: -20px;
     border-radius: 5px;
@@ -243,7 +242,6 @@ button {
 
 .add-tweets-right button {
     position: relative;
-    background-repeat: no-repeat;
     border-radius: 3px;
     width: 37px;
     height: 27px;
@@ -317,10 +315,6 @@ button {
     border-bottom: 1px solid #eee;
 }
 
-.tweets-menu-item {
-    
-}
-
 .tweets-menu-link {
     display: block;
     padding: 10px;
@@ -380,14 +374,8 @@ button {
     color: #999;
 }
 
-
-
-
-
-
 .sidebar {
     width: 380px;
-    min-height: 800px;
     background-color: #e5e3de;
     margin-right: -20px;
     border-radius: 5px;
@@ -395,20 +383,20 @@ button {
     padding-right: 20px;
 }
 
-.sidebar-page {
+.sidebar-about {
     display: flex;
     align-items: center;
     margin-top: 22px;
     margin-bottom: 12px;
 }
 
-.sidebar-page-image {
+.sidebar-about-image {
     width: 24px;
     display: block;
     margin-right: 4px;
 }
 
-.sidebar-page-title {
+.sidebar-about-title {
     font-size: 16px;
     font-weight: 400;
     color: #423c32;
@@ -583,18 +571,18 @@ button {
     display: block;
 }
 
-.sidebar-list-links {
+.sidebar-links {
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
 }
 
-.sidebar-item-links {
+.sidebar-links-item {
     margin-right: 9px;
     margin-top: -7px;
 }
 
-.sidebar-item-links a {
+.sidebar-links-item a {
     font-size: 11px;
 }
 
