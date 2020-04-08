@@ -10,13 +10,21 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: #317ea8;
+}
+
+button {
+    cursor: pointer;
+}
+
 .container {
     width: 920px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 20px;
     padding-right: 20px;
-    outline: 1px solid red;
 }
 
 .page-header {
@@ -93,7 +101,6 @@ body {
 }
 
 .user-profile a {
-    text-decoration: none;
     font-size: 13px;
     color: #a8a8a8;
     background-image: url(./images/drop-arrow.png);
@@ -117,15 +124,16 @@ body {
 
 .main {
     width: 540px;
-    height: 300px;
     background-color: #fff;
     margin-left: -20px;
+    border-radius: 5px;
 }
 
 .user-info {
     padding: 20px 20px 0;
     margin-bottom: 26px;
     display: flex;
+    margin-bottom: 26px;
 }
 
 .user-info-image {
@@ -172,23 +180,415 @@ body {
 
 .user-info-bio {
     font-size: 14px;
+    font-style: italic;
     color: #777777;
 }
 
 .user-info-url {
     font-size: 13px;
-    color: #317ea8;
-    text-decoration: none;
 }
 
 .user-info-url:hover {
     text-decoration: underline;
 }
 
+.add-tweet {
+    margin: 10px 10px 0;
+    background-color: #f4f4f4;
+    border-radius: 3px;
+}
+
+.add-tweets-top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #dfdfdf;
+    padding: 8px 10px;
+}
+
+.add-tweets-left {
+    display: flex;
+    align-items: center;
+}
+
+.device-image {
+    margin-left: 10px;
+    margin-right: 8px;
+}
+
+.add-tweets-following {
+    padding: 8px 16px 8px 34px;
+    line-height: 12px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #41d06e;
+    border: 1px solid #227722;
+    border-radius: 3px;
+    background-image: -moz-linear-gradient( 90deg, rgb(0,171,61) 0%, rgb(73,213,116) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(0,171,61) 0%, rgb(73,213,116) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(0,171,61) 0%, rgb(73,213,116) 100%);
+    position: relative;
+}
+
+.add-tweets-following::before {
+    content: "";
+    position: absolute;
+    background-image: url(./images/check-mark.png);
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 12px;
+    left: 9px;
+    top: 9px;
+}
+
+.add-tweets-right button {
+    position: relative;
+    border-radius: 3px;
+    width: 37px;
+    height: 27px;
+    border: 1px solid #bbb;
+    background-image: -moz-linear-gradient( 90deg, rgb(221,221,221) 0%, rgb(254,254,254) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(221,221,221) 0%, rgb(254,254,254) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(221,221,221) 0%, rgb(254,254,254) 100%);
+}
+
+.add-tweets-right button::before {
+    content: "";
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.add-tweets-right .add-tweets-mail::before {
+    background-image: url(./images/mail-image.png);
+    background-position: center;
+    width: 15px;
+    height: 10px;
+    left: 10px;
+    top: 7px;
+} 
+
+.add-tweets-right .add-tweets-user {
+    margin-left: 5px;
+}
+
+.add-tweets-right .add-tweets-user::before {
+    background-image: url(./images/user-icon.png);
+    width: 13px;
+    height: 12px;
+    left: 8px;
+    top: 6px;
+}
+
+.add-tweets-user::after {
+    content: "";
+    background-image: url(./images/drop-toggle.png);
+    background-repeat: no-repeat;
+    left: 23px;
+    top: 11px;
+    position: absolute;
+    width: 7px;
+    height: 4px;
+}
+
+.add-tweets-bottom {
+    padding: 11px 10px 15px;
+}
+
+.add-tweets-field {
+    width: 100%;
+    display: block;
+    height: 34px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 8px 8px 8px;
+    font-size: 14px;
+    line-height: 14px;
+    color: #999;
+    resize: vertical;
+    max-height: 100px;
+}
+
+.tweets-menu {
+    display: flex;
+    padding-left: 10px;
+    margin-top: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.tweets-menu-link {
+    display: block;
+    padding: 10px;
+    font-size: 13px;
+    border: 1px solid transparent;
+    position: relative;
+    top: 3px;
+}
+
+.tweets-menu-link.active {
+    background-color: #fff;
+    border-radius: 5px;
+    border-color: #eee;
+    border-bottom: none;
+    color: #333;
+}
+
+.tweets-item {
+    display: flex;
+    padding: 13px 20px;
+    align-items: flex-start;
+    border-bottom: 1px solid #eee;
+}
+
+.tweets-item-image {
+    width: 48px;
+    display: block;
+    height: auto;
+    margin-right: 11px;
+    position: relative;
+    top: 4px;
+}
+
+.tweets-item-content {
+    width: calc(100% - 60px);
+    line-height: 18px;
+}
+
+.tweets-item-username {
+    font-size: 15px;
+    color: #333;
+}
+
+.tweets-item-username span {
+    font-size: 13px;
+    color: #999;
+    font-weight: 400;
+}
+
+.tweets-item-text {
+    font-size: 15px;
+    color: #333;
+}
+
+.tweets-item-date {
+    font-size: 11px;
+    color: #999;
+}
+
 .sidebar {
     width: 380px;
-    height: 300px;
     background-color: #e5e3de;
     margin-right: -20px;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.sidebar-about {
+    display: flex;
+    align-items: center;
+    margin-top: 22px;
+    margin-bottom: 12px;
+}
+
+.sidebar-about-image {
+    width: 24px;
+    display: block;
+    margin-right: 4px;
+}
+
+.sidebar-about-title {
+    font-size: 16px;
+    font-weight: 400;
+    color: #423c32;
+}
+
+.sidebar-menu-list {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #cdcdc9;
+}
+
+.sidebar-menu-item {
+    border-left: 1px solid #cbccc8;
+    padding: 3px 13px;
+    height: 32px;
+    margin-bottom: 15px;
+}
+
+.sidebar-menu-item:first-child {
+    border-left: none;
+    padding: 3px 13px 3px 0;
+}
+
+.sidebar-menu-link {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: #197db3;
+    line-height: 9px;
+}
+
+.sidebar-menu-item span {
+    font-size: 11px;
+    color: #423c32;
+}
+
+.recent-images {
+    margin-top: 22px;
+    border-bottom: 1px solid #cfcfca;
+}
+
+.recent-images-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.recent-images-top h3 {
+    margin-right: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #423c32;
+}
+
+.recent-images-top a {
+    font-size: 13px;
+}
+
+.recent-images-list {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.recent-images-item {
+    margin-right: 2px;
+}
+
+.similar {
+    margin-top: 22px;
+}
+
+.similar-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.similar-top h3 {
+    margin-right: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #423c32;
+}
+
+.similar-top a {
+    font-size: 13px;
+}
+
+.similar-list {
+    margin-bottom: 22px;
+}
+
+.similar-item {
+    display: flex;
+    align-items: start;
+    margin-bottom: 13px;
+}
+
+.similar-item-image {
+    display: block;
+    width: 32px;
+    height: auto;
+    margin-right: 6px;
+}
+
+.similar-item-username {
+    font-weight: 700;
+    font-size: 13px;
+    color: #423c32;
+    line-height: 16px;
+}
+
+.similar-item-username span {
+    font-weight: 400;
+    font-size: 13px;
+    color: #423c32;
+}
+
+.similar-item-text {
+    font-style: italic;
+    font-size: 12px;
+    color: #423c32;
+}
+
+.similar-tweeter-icon {
+    position: relative;
+}
+
+.similar-tweeter-icon::after {
+    content: "";
+    background-image: url(./images/similar-icon.png);
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    right: 97px;
+    top: 2px;
+}
+
+.following {
+    border-bottom: 1px solid #cfcfca;
+}
+
+.following-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.following-top h3 {
+    margin-right: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #423c32;
+}
+
+.following-top a {
+    font-size: 13px;
+}
+
+.following-list {
+    display: flex;
+    margin-bottom: 22px;
+}
+
+.following-item {
+    margin-right: 2px;
+}
+
+.following-item-image {
+    width: 24px;
+    display: block;
+}
+
+.sidebar-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.sidebar-links-item {
+    margin-right: 9px;
+    margin-top: -7px;
+}
+
+.sidebar-links-item a {
+    font-size: 11px;
+}
+
+.sidebar-copy {
+    font-size: 11px;
+    color: #423c32;
+    margin: 6px 0 0 3px;
 }
   
